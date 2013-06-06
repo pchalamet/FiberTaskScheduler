@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiberTaskScheduler", "FiberTaskScheduler\FiberTaskScheduler.csproj", "{8E46850B-45C1-4798-B36E-BE3645D1C613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFiberTaskScheduler", "TestFiberTaskScheduler\TestFiberTaskScheduler.csproj", "{2B2A31D9-E2CE-487F-92D9-DC4E50D5210A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E46850B-45C1-4798-B36E-BE3645D1C613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E46850B-45C1-4798-B36E-BE3645D1C613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E46850B-45C1-4798-B36E-BE3645D1C613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E46850B-45C1-4798-B36E-BE3645D1C613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B2A31D9-E2CE-487F-92D9-DC4E50D5210A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2A31D9-E2CE-487F-92D9-DC4E50D5210A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2A31D9-E2CE-487F-92D9-DC4E50D5210A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2A31D9-E2CE-487F-92D9-DC4E50D5210A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
