@@ -1,4 +1,4 @@
 FiberTaskScheduler
 ==================
 
-User land scheduler based on fibers
+User land scheduler using fibers
