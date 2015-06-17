@@ -1,4 +1,2 @@
-FiberTaskScheduler
-==================
-
-User land scheduler using fibers
+User land scheduler for .NET using fibers.
+This is a port of my unmanaged FiberTask library.
