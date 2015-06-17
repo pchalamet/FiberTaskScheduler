@@ -13,6 +13,8 @@
 // // See the License for the specific language governing permissions and
 // // limitations under the License.
 
+using System;
+
 namespace FiberTaskScheduler
 {
     using System.Threading;
@@ -79,14 +81,18 @@ namespace FiberTaskScheduler
             {
                 Run();
             }
-            catch (ThreadAbortException)
+            catch (ThreadAbortException ex)
             {
+                Console.WriteLine(ex);
+ 
                 Thread.ResetAbort();
             }
                     // ReSharper disable EmptyGeneralCatchClause
-            catch
+            catch(Exception ex)
                     // ReSharper restore EmptyGeneralCatchClause
             {
+                Console.WriteLine("Uncaught exception");
+                Console.WriteLine(ex);
             }
 
             _scheduler.SwitchTask();

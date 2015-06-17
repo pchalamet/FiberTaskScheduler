@@ -13,13 +13,13 @@
 // // See the License for the specific language governing permissions and
 // // limitations under the License.
 
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Threading;
+
 namespace FiberTaskScheduler
 {
-    using System;
-    using System.Collections.Concurrent;
-    using System.Collections.Generic;
-    using System.Threading;
-
     public class FiberTaskScheduler
     {
         [ThreadStatic]
@@ -64,8 +64,8 @@ namespace FiberTaskScheduler
             }
 
             uint nextFiberId = _readyTasks.TryDequeue(out _activeTask)
-                                       ? _activeTask.FiberId
-                                       : _schedulerFiberId;
+                ? _activeTask.FiberId
+                : _schedulerFiberId;
             FiberUnmanaged.SwitchToFiber(nextFiberId);
 
             // we are back, check we were not killed meanwhile
@@ -78,7 +78,7 @@ namespace FiberTaskScheduler
         private void Scheduler(object data)
         {
             // schedule root task
-            FiberTask rootTask = (FiberTask) data;
+            FiberTask rootTask = (FiberTask)data;
             _scheduler = this;
 
             _schedulerFiberId = FiberUnmanaged.ConvertThreadToFiber(0);
